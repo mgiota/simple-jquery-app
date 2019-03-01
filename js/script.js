@@ -2,7 +2,7 @@
 let programWrapper = (() => {
     let $searchDescription = 'node';
     let $searchLocation = 'hamburg';
-    let apiUrl = 'https://jobs.github.com/positions.json?description=python&location=new+york';
+    let apiUrl = 'https://github-jobs1.herokuapp.com/jobs';
     let searchResults = [];
     
     
@@ -79,7 +79,7 @@ let programWrapper = (() => {
     }
     
     function main () {
-        makeRequest('https://jobs.github.com/positions.json?description=python&location=new+york').then(
+        makeRequest(apiUrl).then(
             // Executes all the functions that depend on that request
             responseFromAPI => {
                 loadList(responseFromAPI);
